@@ -80,11 +80,11 @@ function estimlots_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 count = car();
 if count >= 11
-    CC = '여석이 없습니다';
-elseif count <= 3
-    CC = '한산합니다';
+    CC = 'There is any space in this area.';
+elseif count == 1
+    CC = 'There is a parking space.';
 else
-    CC = '여석이 있습니다';
+    CC = 'There are parking spaces';
 end
 message = sprintf(CC);
-uiwait(msgbox(message,'여석'));
+uiwait(msgbox(message,'Empty space'));
